@@ -1,0 +1,39 @@
+<html> 
+<head>  
+
+</head>
+<body>
+        <script type="text/javascript">
+            function CheckCountry(val){
+             var element=document.getElementById('Country');
+             if(val=="ksa")
+               document.getElementById('capital').innerHTML = 'Riyadh';
+             if(val=='in')
+             document.getElementById('capital').innerHTML = 'New Delhi';
+             if(val=='fr')
+             document.getElementById('capital').innerHTML = 'Paris';
+             if(val=='japan')
+             document.getElementById('capital').innerHTML = 'Tokyo';
+             if(val=='sk')
+             document.getElementById('capital').innerHTML = 'Seoul';
+             
+            }
+            
+            </script> 
+
+  <select name="Country / Capital" onchange='CheckCountry(this.value);'> 
+    <option>Select a Country : </option>  
+    <option value="ksa">Saudi Arabia</option>
+    <option value="in">India</option>
+    <option value="fr">France</option>
+    <option value="japan">Japan</option>
+    <option value="sk">South Korea</option>
+  </select>
+  
+
+   <span style="color:blue; font-family : verdana " id = 'capital'></span>
+
+
+<input type="text" name="Country" id="Country" style='display:none;'/>
+</body>
+</html>

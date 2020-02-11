@@ -1,0 +1,23 @@
+p {
+    font-size:14px;
+    color:#538b01;
+    font-weight:bold;
+    font-style:italic;
+}
+
+mark.red {
+    color:#ff0000;
+    background: none;
+}
+
+mark.blue {
+    color:#0000A0;
+    background: none;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }

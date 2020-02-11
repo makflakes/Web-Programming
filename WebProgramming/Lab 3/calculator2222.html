@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>HTML Calculator</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    function Calculate(){
+        var op1=document.getElementById('op1');
+        var op2=document.getElementById('op2');
+        var field = document.getElementById("ans").value;
+        var res = field.split(" ");
+             if(res[1]=='+')
+             document.getElementById("ans").value = op1+op2;
+             if(res[1]=='-')
+             document.getElementById("ans").value = op1-op2;
+             if(res[1]=='/')
+             document.getElementById("ans").value = op1/op2;
+             if(res[1]=='*')
+             document.getElementById("ans").value = op1*op2;
+
+            }
+            
+</script> 
+
+
+<form name="calculator" >
+First Operand:<br>
+<input type="text" id = 'op1' name="op1" onchange = 'document.calculator.ans.value+=document.getElementById("op1").value'><br>
+Second Operand:<br>
+<input type="text" id = 'op2' name="op2" onchange = 'document.calculator.ans.value+=document.getElementById("op2").value'><br>
+
+<input type="button" value="-" onClick="document.calculator.ans.value+=' - '">
+<input type="button" value="+" onClick="document.calculator.ans.value+=' + '">
+<input type="button" value="*" onClick="document.calculator.ans.value+=' * '">
+<input type="button" value="/" onClick="document.calculator.ans.value+=' / '">
+
+<input type="reset" value="Reset">
+<input type="button" value="=" onClick="Calculate()">
+
+<br>Solution is <input type="textfield" id="ans" name="ans" value="">
+</form>
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+<html>
+
+<head>
+
+</head>
+
+
+<body>
+
+<script>
+
+
+function Grade(){
+var table = document.getElementById("mytab");
+var studetails = [];
+
+
+
+for (var i = 0, row; row = table.rows[i]; i++) {
+   //iterate through rows
+   //rows would be accessed using the "row" variable assigned in the for loop
+   for (var j = 0, col; col = row.cells[j]; j++) {
+       if(j==0)
+        studetails[i][0] = table.column[j];
+       if (j==1)
+       studetails[i][1] = table.column[j];
+       if (j==2)
+       studetails[i][2] = table.column[j];
+       if (j==3)
+       studetails[i][3] = table.column[j];
+       if (j==4)
+       studetails[i][4] = table.column[j];
+   }  
+}
+}
+
+</script>
+
+<div id="StudentTable">
+<table name="mytab" id="mytab1">
+  <tr> 
+    <td>RNo.</td>
+    <td>Sname</td>
+    <td>Marks 1</td>
+    <td>Marks 2</td>
+    <td>Marks 3</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>LMNOP</td>
+    <td>94</td>
+    <td>88</td>
+    <td>64</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>HIHI</td>
+    <td>90</td>
+    <td>84</td>
+    <td>77</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Kool</td>
+    <td>87</td>
+    <td>88</td>
+    <td>75</td>
+  </tr>
+</table>
+</div>
+
+</body>
+
+</html>
